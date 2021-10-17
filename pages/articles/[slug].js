@@ -5,7 +5,6 @@ import TitleBar from "../../Components/TitleBar"
 import Footer from "../../Components/Footer"
 import sanityClient from '@sanity/client';
 import Head from 'next/head';
-import Image from 'next/image'
 
 
 const client = sanityClient({
@@ -46,7 +45,7 @@ export const Article = ({ title, body, image, published, author, description }) 
         <div className={styles.mainContainer}>
           {title && <p className={styles.largeParagraph}>{title} </p>}
           {published && <p className={styles.smallParagraph}> {"Published At : " + formattedDate(published)} {author ? (" | " + author) : ("")} </p>}
-          {image && <div className={styles.mainImageContainer}><Image src={urlForImage(image)} alt=""/></div>}
+          {image && <div className={styles.mainImageContainer}><img src={urlForImage(image)} alt=""/></div>}
           {body && <BlockContent className={styles.sanityContainer} blocks={body} projectId={"moiev6e2"} dataset={"production"} imageOptions={{ fit: 'max' }} />}
         </div>
         <div className={styles.AddSpace}>
