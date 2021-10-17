@@ -1,0 +1,53 @@
+.Container
+{
+    background-color: rgb(24, 24, 24);
+    min-width: 75vw;
+    max-width: 75vw;
+    min-height: 90vh;
+    max-height: 90vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+.Main
+{
+    width: 90%;
+    margin-top: 2rem;
+    padding: .5rem;
+    text-align: left;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    box-sizing: border-box;
+}
+.LoadBox
+{
+    min-height: 30vh;
+    max-height: 30vh;
+
+    background-color: rgb(34, 34, 34);
+    display: grid;
+    place-items: center;
+}
+.LoadBox p
+{
+    color: rgb(104, 104, 104);
+    margin: 0;
+    font-size: 25px;
+}
+@media only screen and (max-width: 768px){
+    .Container{
+        min-width: 95vw;
+        max-width: 95vw;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+    .Main{
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+    .LoadBox p
+    {
+       display: none;
+    }
+}

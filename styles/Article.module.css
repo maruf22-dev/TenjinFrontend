@@ -1,0 +1,140 @@
+.ArticlePage
+{
+    display: grid;
+    grid-template-columns: 13fr 7fr;
+}
+.AddSpace
+{
+    margin-left: 2rem;
+    padding: 1rem;
+}
+.mainContainer
+{
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color:rgb(34, 34, 34);
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    min-height: 80vh;
+    height: auto;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.mainImageContainer
+{
+    min-height: 60vh;
+    max-height: 60vh;
+    height: 60vh;
+    max-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 3rem;
+}
+.mainImageContainer img
+{
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+}
+.largeParagraph
+{
+    font-size: 35px;
+    font-weight: bolder;
+}
+.smallParagraph
+{
+    font-size: 16px;
+}
+.sanityContainer 
+{
+    display: block;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+    margin: 0;
+    padding: .5rem;
+}
+.sanityContainer figure 
+{ 
+    margin: 0;
+}
+.sanityContainer figure img
+{
+    left: 0;
+    max-width: 100%;
+}
+
+.sanityContainer ul
+{
+    list-style-type: square;
+}
+.sanityContainer ul li
+{
+    margin: .5rem;
+}
+.sanityContainer a
+{
+    color:rgb(100, 210, 110);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sanityContainer a:hover
+{
+    color: #dbdbdb;
+    text-decoration: underline;
+    text-decoration-thickness: .05rem;
+}
+
+
+@media only screen and (max-width: 768px){ 
+    .ArticlePage
+    {
+        grid-template-columns: 1fr;
+    }
+    .mainContainer
+    {
+
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        
+    }
+    .mainImageContainer
+    {
+        max-height: 25vh;
+        min-height: 25vh;
+        max-width: 100%;
+    }
+    .mainImageContainer img
+    {
+        max-height: 100%;
+        min-height: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .sanityContainer 
+    {
+        display: block;
+        width: 100%;
+        background-color: rgb(24, 24, 24);
+        margin: 0;
+        padding: .5rem;
+    }
+    .sanityContainer figure
+    {
+        margin: 0;
+    }
+    .sanityContainer figure img
+    {
+        left: 0;
+    }
+
+}

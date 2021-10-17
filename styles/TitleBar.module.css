@@ -1,0 +1,38 @@
+.TitleBar
+{
+    height: auto;
+    padding: 20px;
+    background-color: rgb(17, 17, 17);
+
+}
+.PageTitle
+{
+    font-size: 50px;
+    margin: 0;
+    margin-left: 2rem;
+    font-weight: 900;
+    text-decoration: none;
+    color:rgb(10, 210, 110);
+    font-style: italic;
+}
+.PageTitle:hover
+{
+    color: #dbdbdb;
+    text-decoration: underline;
+}
+.TitleAccent
+{
+    font-size: 20px;
+    margin: 0;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-style: italic;
+    
+}
+@media only screen and (max-width: 768px){ 
+    .TitleAccent
+    {
+        display: none;
+    }
+
+}
