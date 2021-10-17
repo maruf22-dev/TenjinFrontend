@@ -139,7 +139,7 @@
     line-height: 1.5rem;
     font-weight: 700;
 }
-.InfoLink
+.Right a
 {
     color:rgb(10, 210, 110);
     padding: 0;
@@ -150,7 +150,7 @@
     font-style: italic;
     font-weight: 800;
 }
-.InfoLink:hover
+.Right a:hover
 {
     text-decoration: underline;
     text-decoration-thickness: .05rem;

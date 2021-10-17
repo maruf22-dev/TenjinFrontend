@@ -1,21 +1,22 @@
 import styles from "../styles/Footer.module.css"
+import Link from "next/link"
 const Footer = (props) => (
     <footer className={styles.Footer}>
         <div className={styles.FooterContainer}>
             <div className={styles.FooterRow}>
                 <div className={styles.FooterColumn}>
-                    <a className={styles.FooterItem} href="/home">Home</a>
+                    <Link className={styles.FooterItem} href="/home">Home</Link>
                     <p className={styles.FooterItem}></p>
                     <p className={styles.FooterItem}></p>
 
                 </div>
                 <div className={styles.FooterColumn}>
-                    <a className={styles.FooterItem}  href="mailto: marufbinsalim22@gmail.com" target="_blank">Email Us</a>
+                    <Link className={styles.FooterItem}  href="mailto: marufbinsalim22@gmail.com"  rel="noreferrer" target="_blank">Email Us</Link>
                     <p className={styles.FooterItem}></p>
                     <p className={styles.FooterItem}></p>
                 </div>
                 <div className={styles.FooterColumn}>
-                    <a className={styles.FooterItem} href="https://marufbinsalim.netlify.app/" target="_blank">Developer</a>
+                    <Link className={styles.FooterItem} href="https://marufbinsalim.netlify.app/"  rel="noreferrer" target="_blank">Developer</Link>
                     <p className={styles.FooterItem}></p>
                     <p className={styles.FooterItem}></p>
                 </div>

@@ -30,7 +30,7 @@
     align-items: center;
     justify-content: center;
 }
-.FooterItem
+.FooterColumn a, .FooterColumn p
 {
     width: 100%;
     font-size: 16px;
@@ -41,7 +41,7 @@
     color: #dbdbdb;
     background-color: rgb(17, 17, 17);
 }
-.FooterItem:hover
+.FooterColumn a:hover
 {
     color:rgb(10, 210, 110);
 }

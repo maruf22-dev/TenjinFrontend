@@ -14,7 +14,7 @@ export const Home = () => {
   }
   useEffect(async () => {   
     Router.push("/home");
-  }, []) // All the magic is here
+  }, [Router]) // All the magic is here
   return (
       <div className={styles.Container}>
         Loading . . .

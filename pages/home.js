@@ -7,6 +7,7 @@ import sanityClient from '@sanity/client';
 import ImageBuilder from "@sanity/image-url";
 import ReactPaginate from 'react-paginate';
 import Head from 'next/head'
+import Link from 'next/link'
 
 const client = sanityClient({
     projectId: 'moiev6e2',
@@ -47,7 +48,7 @@ const GetCurrentArticleSnippets = (articles) => {
                 {!article.mainImage && <img src="/default.png" className={styles.SnippetImage} />}
             </div>
             <div className={styles.SnippetLinkContainer}>
-                <a href={"../articles/" + article.slug.current}>Read This Article</a>
+                <Link href={"../articles/" + article.slug.current}>Read This Article</Link>
             </div>
             <div className={styles.SnippetInfoContainer}>
                 <p className={styles.SnippetInfo}>{(article.authorName ? (article.authorName + " | ") : ("")) + formattedDate(article.publishedAt)}</p>
@@ -108,7 +109,7 @@ export const Landing = ({ articles }) => {
                                     <p className={styles.highlighted}>
                                         Md. Maruf Bin Salim Bhuiyan
                                     </p>
-                                    <a className={styles.InfoLink} href="https://marufbinsalim.netlify.app/" target="_blank">
+                                    <a className={styles.InfoLink} href="https://marufbinsalim.netlify.app/" target="_blank"  rel="noreferrer">
                                         visit profile.
                                     </a>
                                 </div>
@@ -129,9 +130,9 @@ export const Landing = ({ articles }) => {
                                 <p className={styles.highlighted}>
                                     Social Media.
                                 </p>
-                                <a className={styles.InfoLink} href="https://www.youtube.com/channel/UCtcJ8BsIPcw9oKA_Wkkmgmw" target="_blank">
+                                <Link className={styles.InfoLink} href="https://www.youtube.com/channel/UCtcJ8BsIPcw9oKA_Wkkmgmw" target="_blank"  rel="noreferrer">
                                     Youtube
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
