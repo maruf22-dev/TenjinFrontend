@@ -5,19 +5,19 @@ export const Loader = () => {
         <div className={styles.Container}>
             <div className={styles.Main}>
                 <div className={styles.LoadBox}>
-                    <ReactLoading type={"spin"} color={'rgb(10,210,110)'} height={'10%'} width={'10%'} />
+                    <ReactLoading type={"spin"} color={'rgb(230, 154, 55)'} height={'10%'} width={'10%'} />
                     <p>Loading</p>
                 </div>
                 <div className={styles.LoadBox}>
-                    <ReactLoading type={"spin"} color={'rgb(10,210,110)'} height={'10%'} width={'10%'} />
+                    <ReactLoading type={"spin"} color={'rgb(230, 154, 55)'} height={'10%'} width={'10%'} />
                     <p>Loading</p>
                 </div>
                 <div className={styles.LoadBox}>
-                    <ReactLoading type={"spin"} color={'rgb(10,210,110)'} height={'10%'} width={'10%'} />
+                    <ReactLoading type={"spin"} color={'rgb(230, 154, 55)'} height={'10%'} width={'10%'} />
                     <p>Loading</p>
                 </div>
                 <div className={styles.LoadBox}>
-                    <ReactLoading type={"spin"} color={'rgb(10,210,110)'} height={'10%'} width={'10%'} />
+                    <ReactLoading type={"spin"} color={'rgb(230, 154, 55)'} height={'10%'} width={'10%'} />
                     <p>Loading</p>
                 </div>
             </div>

@@ -64,7 +64,7 @@ export const Landing = ({ articles }) => {
     const [loading, setLoading] = useState(true);
     const [currentpage, SetCurrentPage] = useState(0);
     const [pageCount, setPageCount] = useState(0);
-    const ITEMS_PER_PAGE = 4;
+    const ITEMS_PER_PAGE = 6;
 
     function timeout(delay) {
         return new Promise(res => setTimeout(res, delay));

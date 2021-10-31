@@ -23,7 +23,7 @@ const Footer = (props) => (
             </div>
         </div>
         <p style={{
-            color: "rgb(10, 210, 110)",
+            color: "rgb(230, 154, 55)",
             textAlign: "center",
             marginTop: "2rem",
             fontSize: "16px"

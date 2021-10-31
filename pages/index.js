@@ -17,7 +17,7 @@ export const Home = () => {
   }, [Router]) // All the magic is here
   return (
       <div className={styles.Container}>
-        Loading . . .
+        <p>Loading . . .</p>
       </div>
   )
 }
