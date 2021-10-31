@@ -29,7 +29,12 @@ const GetCurrentArticleSnippets = (articles) => {
             year: 'numeric',
         })
         return formatted;
-
+    }
+    const GetSmallerTitle = (title)=>
+    {
+        let add = title.length > 50 ? "..." : "";
+        let smallTitle = title.slice(0, 50) + add;
+        return smallTitle; 
     }
 
     const renderedArticleSnippets = articles.map((article) =>
@@ -41,7 +46,7 @@ const GetCurrentArticleSnippets = (articles) => {
                 <meta name="description" content="Blog, Articles from Md. Maruf Bin Salim Bhuiyan. Tenjinbyte, Tenjin, Tech, Productivity" />
             </Head>
             <div className={styles.SnippetTitleContainer}>
-                <p>{article.title}</p>
+                <p>{GetSmallerTitle(article.title)}</p>
             </div>
             <div className={styles.SnippetImageContainer}>
                 {article.mainImage && <img src={urlForImage(article.mainImage)} className={styles.SnippetImage} />}

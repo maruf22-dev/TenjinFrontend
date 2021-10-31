@@ -44,7 +44,8 @@
 .Snippet
 {
     background: linear-gradient(to bottom right, rgb(60,60,60), rgb(35,35,35));
-    height: 320px;
+    height: 300px;
+    max-height: auto;
     width: 98%;
     border-radius: 20px;
     padding: 10px;
@@ -54,14 +55,12 @@
     text-align: center;
     display: grid;
     place-items: center;
-    max-height: 10%;
     min-height: 10%;
     font-weight: 900;
     font-size: large;
 }
 .SnippetInfoContainer
 {
-    max-height: 10%;
     min-height: 10%;
     text-align: center;
     display: grid;
@@ -75,7 +74,6 @@
 }
 .SnippetLinkContainer
 {
-    max-height: 10%;
     min-height: 10%;
     text-align: center;
     display: grid;
@@ -84,6 +82,7 @@
     margin: 0;
 }
 .SnippetLinkContainer a{
+    min-height: 10%;
     font-family: 'Trebuchet MS';
     font-weight: 800;
     color:rgb(230, 154, 55);
@@ -99,20 +98,22 @@
 }
 .SnippetImageContainer
 {
-    height: 70%;
-    max-height: 70%;
-    min-height: 70%;
+    height: 40%;
+    max-height: 40%;
+    min-height: 40%;
     width: 100%;
     display: grid;
     place-items: center;
+    align-items: center;
+    justify-content: center;
 }
 .SnippetImageContainer img
 {
     height: 90%;
     max-height: 90%;
     min-height: 90%;
-    width: 95%;
-    max-width: 95%;
+    width: 100%;
+    max-width: 100%;
     border-radius: 12px;
 }
 
