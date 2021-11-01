@@ -8,7 +8,6 @@ import ImageBuilder from "@sanity/image-url";
 import ReactPaginate from 'react-paginate';
 import Head from 'next/head'
 import Link from 'next/link'
-
 const client = sanityClient({
     projectId: 'moiev6e2',
     dataset: 'production',
@@ -16,11 +15,9 @@ const client = sanityClient({
     useCdn: true,
 })
 const builder = ImageBuilder(client);
-
 function urlForImage(source) {
     return builder.image(source).url();
 }
-
 const GetCurrentArticleSnippets = (articles) => {
     const formattedDate = (dateString) => {
         let formatted = new Date(dateString).toLocaleDateString('en-US', {
@@ -36,10 +33,7 @@ const GetCurrentArticleSnippets = (articles) => {
         let smallTitle = title.slice(0, 50) + add;
         return smallTitle; 
     }
-
     const renderedArticleSnippets = articles.map((article) =>
-
-
         <div key={article.slug.current} className={styles.Snippet}>
             <Head>
                 <title>Home</title>
@@ -62,15 +56,11 @@ const GetCurrentArticleSnippets = (articles) => {
     );
     return renderedArticleSnippets;
 }
-
 export const Landing = ({ articles }) => {
-
-
     const [loading, setLoading] = useState(true);
     const [currentpage, SetCurrentPage] = useState(0);
     const [pageCount, setPageCount] = useState(0);
     const ITEMS_PER_PAGE = 6;
-
     function timeout(delay) {
         return new Promise(res => setTimeout(res, delay));
     }
@@ -78,7 +68,6 @@ export const Landing = ({ articles }) => {
         SetCurrentPage(0);
         setPageCount(Math.ceil(articles.length / ITEMS_PER_PAGE));
     }, [articles]);
-
     async function load() {
         await timeout(750);
         setLoading(false);
@@ -87,7 +76,6 @@ export const Landing = ({ articles }) => {
         SetCurrentPage(selected);
     }
     load();
-
     return (
         <div className={styles.Container}>
             <TitleBar Accent />
@@ -100,8 +88,6 @@ export const Landing = ({ articles }) => {
                             <div className={styles.ArticleContainer}>
                                 {articles && GetCurrentArticleSnippets(articles.slice(currentpage * ITEMS_PER_PAGE, (currentpage + 1) * ITEMS_PER_PAGE))
                                 }
-
-
                             </div>
                         </div>
                         <div className={styles.Right}>
@@ -118,7 +104,6 @@ export const Landing = ({ articles }) => {
                                         visit profile.
                                     </a>
                                 </div>
-
                             </div>
                             <div>
                                 <p className={styles.highlighted}>
@@ -156,14 +141,12 @@ export const Landing = ({ articles }) => {
         </div>
     )
 }
-
 // gets the props for the current homepage
 export const getServerSideProps = async pageContext => {
     const notApplicable =
     {
         notFound: true
     }
-
     // generate endpoint and query
     const sanityQuery = encodeURIComponent(`*[_type == "post"]{
           title,
@@ -174,10 +157,8 @@ export const getServerSideProps = async pageContext => {
           keywords,
           description
       }`);
-
     const backendURL = `https://moiev6e2.api.sanity.io/v1/data/query/production?query=${sanityQuery}`;
     try {
-
         const result = await fetch(backendURL).then(response => response.json());
         const articles = result.result;
         if (articles == undefined) {
@@ -188,8 +169,6 @@ export const getServerSideProps = async pageContext => {
     }
     catch (err) {
         return notApplicable;
-
     }
 };
-
 export default Landing;

@@ -28,17 +28,14 @@ const formattedDate = (dateString) => {
   return formatted;
 
 }
-
 // article object
 export const Article = ({ title, body, image, published, author, description }) => {
-
   return (
     <>
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
     </Head>
-
       <TitleBar />
       <div className={styles.ArticlePage}>
 
@@ -55,7 +52,6 @@ export const Article = ({ title, body, image, published, author, description }) 
     </>
   )
 }
-
 // gets the props for the current slug
 export const getServerSideProps = async pageContext => {
   const notApplicable =
@@ -84,10 +80,8 @@ export const getServerSideProps = async pageContext => {
             }
           }
     }`);
-
   const backendURL = `https://moiev6e2.api.sanity.io/v1/data/query/production?query=${sanityQuery}`;
   try {
-
     const result = await fetch(backendURL).then(response => response.json());
     const articleData = result.result[0];
     if (articleData == undefined) {
@@ -106,14 +100,10 @@ export const getServerSideProps = async pageContext => {
       articleProps.author = articleData.authorName;
     if(articleData.description)
       articleProps.description = articleData.description;
-
     return { props: articleProps };
-
   }
   catch (err) {
     return notApplicable;
-
   }
 };
-
 export default Article;
