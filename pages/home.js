@@ -27,11 +27,10 @@ const GetCurrentArticleSnippets = (articles) => {
         })
         return formatted;
     }
-    const GetSmallerTitle = (title)=>
-    {
+    const GetSmallerTitle = (title) => {
         let add = title.length > 50 ? "..." : "";
         let smallTitle = title.slice(0, 50) + add;
-        return smallTitle; 
+        return smallTitle;
     }
     const renderedArticleSnippets = articles.map((article) =>
         <div key={article.slug.current} className={styles.Snippet}>
@@ -100,7 +99,7 @@ export const Landing = ({ articles }) => {
                                     <p className={styles.highlighted}>
                                         Md. Maruf Bin Salim Bhuiyan
                                     </p>
-                                    <a className={styles.InfoLink} href="https://marufbinsalim.netlify.app/" target="_blank"  rel="noreferrer">
+                                    <a className={styles.InfoLink} href="https://marufbinsalim.netlify.app/" target="_blank" rel="noreferrer">
                                         visit profile.
                                     </a>
                                 </div>
@@ -120,7 +119,7 @@ export const Landing = ({ articles }) => {
                                 <p className={styles.highlighted}>
                                     Social Media.
                                 </p>
-                                <Link className={styles.InfoLink} href="https://www.youtube.com/channel/UCtcJ8BsIPcw9oKA_Wkkmgmw" target="_blank"  rel="noreferrer">
+                                <Link className={styles.InfoLink} href="https://www.youtube.com/channel/UCtcJ8BsIPcw9oKA_Wkkmgmw" target="_blank" rel="noreferrer">
                                     Youtube
                                 </Link>
                             </div>

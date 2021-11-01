@@ -11,12 +11,12 @@ const Footer = (props) => (
 
                 </div>
                 <div className={styles.FooterColumn}>
-                    <Link className={styles.FooterItem}  href="mailto: marufbinsalim22@gmail.com"  rel="noreferrer" target="_blank">Email Us</Link>
+                    <Link className={styles.FooterItem} href="mailto: marufbinsalim22@gmail.com" rel="noreferrer" target="_blank">Email Us</Link>
                     <p className={styles.FooterItem}></p>
                     <p className={styles.FooterItem}></p>
                 </div>
                 <div className={styles.FooterColumn}>
-                    <Link className={styles.FooterItem} href="https://marufbinsalim.netlify.app/"  rel="noreferrer" target="_blank">Developer</Link>
+                    <Link className={styles.FooterItem} href="https://marufbinsalim.netlify.app/" rel="noreferrer" target="_blank">Developer</Link>
                     <p className={styles.FooterItem}></p>
                     <p className={styles.FooterItem}></p>
                 </div>
@@ -28,7 +28,7 @@ const Footer = (props) => (
             marginTop: "2rem",
             fontSize: "16px"
         }}>
-           © tejinbyte. All Rights Reserved. 2021
+            © tejinbyte. All Rights Reserved. 2021
         </p>
     </footer>
 )

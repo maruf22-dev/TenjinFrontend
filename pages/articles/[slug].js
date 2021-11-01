@@ -5,8 +5,6 @@ import TitleBar from "../../Components/TitleBar"
 import Footer from "../../Components/Footer"
 import sanityClient from '@sanity/client';
 import Head from 'next/head';
-
-
 const client = sanityClient({
   projectId: 'moiev6e2',
   dataset: 'production',
@@ -18,7 +16,6 @@ const builder = ImageBuilder(client);
 function urlForImage(source) {
   return builder.image(source).url();
 }
-
 const formattedDate = (dateString) => {
   let formatted = new Date(dateString).toLocaleDateString('en-US', {
     day: '2-digit',
@@ -32,17 +29,16 @@ const formattedDate = (dateString) => {
 export const Article = ({ title, body, image, published, author, description }) => {
   return (
     <>
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-    </Head>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Head>
       <TitleBar />
       <div className={styles.ArticlePage}>
-
         <div className={styles.mainContainer}>
           {title && <p className={styles.largeParagraph}>{title} </p>}
           {published && <p className={styles.smallParagraph}> {"Published At : " + formattedDate(published)} {author ? (" | " + author) : ("")} </p>}
-          {image && <div className={styles.mainImageContainer}><img src={urlForImage(image)} alt=""/></div>}
+          {image && <div className={styles.mainImageContainer}><img src={urlForImage(image)} alt="" /></div>}
           {body && <BlockContent className={styles.sanityContainer} blocks={body} projectId={"moiev6e2"} dataset={"production"} imageOptions={{ fit: 'max' }} />}
         </div>
         <div className={styles.AddSpace}>
@@ -98,7 +94,7 @@ export const getServerSideProps = async pageContext => {
       articleProps.published = articleData.publishedAt;
     if (articleData.authorName)
       articleProps.author = articleData.authorName;
-    if(articleData.description)
+    if (articleData.description)
       articleProps.description = articleData.description;
     return { props: articleProps };
   }

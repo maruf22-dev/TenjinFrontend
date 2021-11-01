@@ -1,6 +1,4 @@
-
-
-const Sitemap = () => {};
+const Sitemap = () => { };
 export const getServerSideProps = async (pageContext) => {
     let res = pageContext.res;
     const formattedDate = (dateString) => {
@@ -23,10 +21,10 @@ export const getServerSideProps = async (pageContext) => {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${articles
-        .map((article) => {
+            .map((article) => {
                 return `
                 <url>
-                <loc>${ pageContext.req.headers.host + "/articles/" + article.slug.current}</loc>
+                <loc>${pageContext.req.headers.host + "/articles/" + article.slug.current}</loc>
                 <lastmod>${formattedDate(article.publishedAt)}</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>
@@ -39,8 +37,8 @@ export const getServerSideProps = async (pageContext) => {
     res.setHeader("Content-Type", "text/xml");
     res.write(sitemap);
     res.end();
-    return { 
-        props: {} 
+    return {
+        props: {}
     };
 };
 
