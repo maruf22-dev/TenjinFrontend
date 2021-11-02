@@ -34,6 +34,15 @@
     place-items: center;
     margin-bottom: 3rem;
 }
+.mainContainer h1, .mainContainer h2, .mainContainer h3 , .mainContainer h4, .mainContainer p
+{
+    color: rgb(179, 179, 179);
+    padding: 4px;
+    line-height: 1.35em;
+}
+
+
+
 .mainImageContainer img
 {
     display: block;
@@ -42,12 +51,13 @@
     max-height: 100%;
     min-height: 100%;
 }
-.largeParagraph
+.mainContainer .largeParagraph
 {
+    color: #c4c4c4;
     font-size: 35px;
     font-weight: bolder;
 }
-.smallParagraph
+.mainContainer .smallParagraph
 {
     font-size: 16px;
 }
@@ -59,6 +69,7 @@
     margin: 0;
     padding: .5rem;
 }
+
 .sanityContainer figure 
 { 
     margin: 0;
